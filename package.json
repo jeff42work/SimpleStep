@@ -1,11 +1,25 @@
 {
   "name": "simple-step-progress",
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/SimpleStep.common.js",
+  "private": false,
+  "author": "Jeff <jeff42work@gmail.com>",
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*"
+  ],
+  "keywords": [
+    "step",
+    "progress",
+    "進度"
+  ],
+
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --target lib --name SimpleStep ./src/components/index.js",
+    "lint": "vue-cli-service lint",
+    "build:doc": "vue-cli-service build ./src/main.js --dest docs --mode development"
   },
   "dependencies": {
     "core-js": "^3.8.3",
