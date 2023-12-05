@@ -2,8 +2,8 @@
       <!-- 上方頁籤進度條 -->
       <div class="frame-style" style="">
         <div class="tag-mark">
-          <div style="padding-top: 10px;">期貨</div>
-          <div style="padding-bottom: 10px;">填寫步驟</div>
+          <div style="padding-top: 10px;">{{ tittle1 }}</div>
+          <div style="padding-bottom: 10px;">{{ tittle2 }}</div>
         </div>
 
         <div>

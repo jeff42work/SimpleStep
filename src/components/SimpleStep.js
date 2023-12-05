@@ -2,6 +2,10 @@ export default {
   name: "FillInFutures",
 
   props: {
+    tittle1: {
+    },
+    tittle2: {
+    },
     currentIndex: {
       default: -1
     },

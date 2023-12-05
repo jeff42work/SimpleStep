@@ -8,7 +8,21 @@
     <br />
     <br />
 
-    <SimpleStep :currentIndex.sync="currentIndex" :bookMark.sync="bookMark"/>
+    <SimpleStep :currentIndex.sync="currentIndex"
+                :bookMark.sync="bookMark"
+                :tittle1.sync="tittle1"
+                :tittle2.sync="tittle2"/>
+
+    <br />
+    <br />
+
+    <div>
+      <label> Tittle1 </label>
+      <input v-model="tittle1" placeholder="Tittle1" style="margin-right: 15px">
+
+      <label> Tittle2 </label>
+      <input v-model="tittle2" placeholder="Tittle2" style="margin-right: 15px">
+    </div>
 
     <br />
     <br />
@@ -20,16 +34,16 @@
       <label> name </label>
       <input v-model="addName" placeholder="name" style="margin-right: 15px">
 
-      <button @click="addNewStep()">新增步驟</button>
-      <button @click="clearStep()">清空步驟</button>
+      <button @click="addNewStep()">add new sep</button>
+      <button @click="clearStep()">clear step</button>
     </div>
 
     <br />
     <br />
 
     <div>
-      <button @click="previousPage()">上一頁</button>
-      <button @click="nextPage()">下一頁</button>
+      <button @click="previousPage()">Previous Step</button>
+      <button @click="nextPage()">Nex Step</button>
     </div>
 
 
@@ -53,8 +67,14 @@ export default {
 
   data() {
     return {
+      tittle1: 'Account opening',
+      tittle2: 'FillInSteps',
+
       currentIndex: 0,
       bookMark: [
+        { show: true, label: "Basin Info", name: "BasicInfo" },
+        { show: true, label: "Adv Info", name: "AdvInfo" },
+        { show: true, label: "FATCA and CRS data", name: "FATCA" },
       ],
 
       addLabel: '',
